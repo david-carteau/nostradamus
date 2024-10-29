@@ -1,31 +1,62 @@
 ## The Nostradamus UCI Chess Engine
 
-![Logo](/v0.1/2. engine/nostradamus.jpg)
+![Logo](/v0.1/nostradamus.jpg)
 
 The **Nostradamus** UCI chess engine uses a **small language model** which is specially trained to predict the best move given a particular position.
 
-I'm fascinated by the performance of small language models like [Microsoft Phi 3.5](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) and decided to train one to play chess.
+I'm fascinated by the performance of small language models like [Microsoft Phi 3.5](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) and decided to train one to play chess ;-)
 
-The engine is at an early stage of development and is currently very weak (it scores about 80% against a random mover).
+The engine is at an **early stage of development** and is currently very weak (it scores about 80% against a random mover).
 
-Do not consider using it, except if you are curious ;-)
+**Do not consider using it**, except if you are curious ;-)
 
-Source code is available to:
+<br/>
 
-    **Train the tokeniser**, responsible for converting fenstrings into sequences of tokens
-    **Train the language model**, responsible for predicting the most likely move for a given fenstring
-    **Use the language model in a chess engine compatible with the UCI protocol.
+## Installation
 
-To use both trainers you'll need
-
-- an NVIDIA GPU (do not consider training on the CPU, as it would be very slow)
+To use the UCI engine, you'll need:
 - a **Python** runtime: https://www.python.org/
-- some Python libraries: see '''0. install_libraries.bat''' script (adapt it to your platform/environment)
-- the [pgn-extract] tool (https://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/)
+- some **Python libraries**: `pip install --user chess==1.11.1 torch==2.4.1 transformers==4.46.0`
 
-To use the UCI engine, use the packaged version (target: Windows 11 + Python 3.11).
+<br/>
 
-If you don't want to contribute, you can reach me at [talkchess.com](https://www.talkchess.com) 🌟.
+## Language model training
+
+Source code is also available to:
+
+- Train the tokeniser, responsible for converting fenstrings into sequences of tokens
+- Train the language model, responsible for predicting the most likely move for a given fenstring
+- Use the language model in a chess engine compatible with the UCI protocol
+
+<br/>
+
+To use both trainers, you'll need:
+
+- a **NVIDIA GPU** (do not consider training on the CPU, as it would be very slow)
+- a **Python** runtime: https://www.python.org/
+- some **Python libraries**: see `0. install_libraries.bat` script (adapt it to your platform/environment)
+- the `pgn-extract` tool (https://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/)
+- a `games.pgn` file containing games in PGN format, put in a `pgn` folder (to create)
+
+<br/>
+
+In its 0.1 version, the model has been trained:
+- using 32M positions extracted from [CCRL](https://www.computerchess.org.uk/ccrl/) games
+- excluding drawn games (i.e. `1/2-1/2' result)
+- targeting a 6GB VRAM GPU
+
+<br/>
+
+## Contribute to the experiment!
+
+If you want to contribute, you can reach me at [talkchess.com](https://www.talkchess.com) 🌟.
+
+Next steps might include:
+- using more positions/epochs to train the language model
+- using an encoder/decoder model
+- using a handcrafted model
+
+<br/>
 
 ## Copyright, licence
 
