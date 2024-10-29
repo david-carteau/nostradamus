@@ -56,7 +56,7 @@ In its 0.1 version, the model has been trained:
 
 ## Contribute to the experiment!
 
-If you want to contribute, you can reach me at [talkchess.com](https://www.talkchess.com) 🌟.
+If you want to contribute, you can reach me at [talkchess.com](https://www.talkchess.com) !
 
 <br/>
 
