@@ -17,12 +17,19 @@ The engine is at an **early stage of development** and is currently very weak (i
 To use the UCI engine, you'll need:
 - a **Python** runtime: https://www.python.org/
 - some **Python libraries**: `pip install --user chess==1.11.1 torch==2.4.1 transformers==4.46.0`
+- to train a language model (see below)
+
+<br/>
+
+Or directly [download](https://www.orionchess.com/download/Nostradamus-v0.1.zip) the engine packaged with:
+- a pretrained language model (see below for more details on used data)
+- Python librairies for Windows 11 + Python 3.11
 
 <br/>
 
 ## Language model training
 
-Source code is also available to:
+Source code is provided to:
 
 - Train the tokeniser, responsible for converting fenstrings into sequences of tokens
 - Train the language model, responsible for predicting the most likely move for a given fenstring
@@ -50,6 +57,8 @@ In its 0.1 version, the model has been trained:
 ## Contribute to the experiment!
 
 If you want to contribute, you can reach me at [talkchess.com](https://www.talkchess.com) 🌟.
+
+<br/>
 
 Next steps might include:
 - using more positions/epochs to train the language model
