@@ -22,8 +22,8 @@ To use the UCI engine, you'll need:
 <br/>
 
 Or directly [download](https://www.orionchess.com/download/Nostradamus-v0.1.zip) the engine packaged with:
-- a pretrained language model (see below for more details on used data)
-- Python librairies for Windows 11 + Python 3.11
+- a pre-trained language model (see below for more details on the data used)
+- Python libraries for Windows 11 + Python 3.11
 
 <br/>
 
