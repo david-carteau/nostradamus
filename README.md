@@ -18,7 +18,7 @@ I first tried to train a model with sequences of moves, e.g. `e2e4 c7c5 g1f3 e7e
 
 The advantage is that you can ask the model to predict the following moves and get a full principal variation. The disadvantage is that it is very difficult for the model to know which pieces are where, it has to follow every piece from the beginning of the game (e.g. after `... g1f3 ... f3d4` : there's now a knight on d4). This leads to a lot of illegal moves when trying to predict the next best move.
 
-I then helped the model by not giving the sequence of moves, but the representation of the board (as a fenstring) : it dramatically reduces the generation of illegal moves, and performs slightly better against a random mover, event with a limited amount of data.
+I then helped the model by not giving the sequence of moves, but the representation of the board (as a fenstring) : it dramatically reduces the generation of illegal moves, and performs slightly better against a random mover, even with a limited amount of data.
 
 <br/>
 
