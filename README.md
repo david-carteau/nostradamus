@@ -1,6 +1,6 @@
 ## The Nostradamus UCI Chess Engine
 
-![Logo](/v0.1 (decoder)/nostradamus.jpg)
+![Logo](https://github.com/david-carteau/nostradamus/blob/main/v0.1%20(decoder)/nostradamus.jpg)
 
 The **Nostradamus** UCI chess engine uses a **small language model** to play chess:
 - unlike other engines, it doesn't rely on a traditional search tree to find the best combination of moves
