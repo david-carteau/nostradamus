@@ -109,14 +109,14 @@ Some useful figures:
 
 ## Contribute to the experiment !
 
-If you want to contribute, do not hesitate to reach me through the [talkchess.com](https://www.talkchess.com) forum !
+If you want to contribute, do not hesitate to contact me via the [talkchess.com](https://www.talkchess.com) forum !
 
 <br/>
 
 Next steps might include:
 - using more positions/epochs to train the language models
 - using a handcrafted model
-- mix fenstring and sequence of moves as inputs
+- mixing fenstring and sequence of moves as inputs
 
 <br/>
 
