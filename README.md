@@ -50,7 +50,7 @@ I first trained a model with "sentences" consisting of simple sequences of moves
 
 This is very similar to the way language models work. The advantage is that you can ask the model to predict the following moves and get a full principal variation !
 
-However, with this approach it's very difficult for the model to know the position of the pieces: it has to follow every piece from the beginning of the game (e.g. after `... g1f3 ... f3d4` : there is now a knight on `d4`). This leads to a lot of illegal moves when trying to predict the next best move.
+However, with this approach, it's very difficult for the model to know the position of the pieces: it has to follow every piece from the beginning of the game (e.g. after `... g1f3 ... f3d4` : there is now a knight on `d4`). This leads to a lot of illegal moves when trying to predict the next best move.
 
 Instead of the sequence of moves, I decided to give the (textual) representation of the board (as a fenstring) as the "sentence": this drastically reduces the generation of illegal moves !
 
@@ -103,7 +103,7 @@ Some useful figures:
 
 - provided models were trained targeting a 12GB VRAM GPU (Nvidia RTX 4070 Ti)
 - each version needed 5 to 6 hours of training
-- a computer with at least 64 BG of RAM is strongly recommended !
+- a computer with at least 64 GB of RAM is strongly recommended !
 
 <br/>
 
