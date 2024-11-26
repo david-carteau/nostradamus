@@ -48,17 +48,17 @@ Given a sentence, language models try to predict the most likely word to follow.
 
 I first trained a model with "sentences" consisting of simple sequences of moves, e.g. `e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3`, with the aim of predicting the next best move, e.g. `g8f6`.
 
-This is very similar to the way language models work. The advantage is that you can ask the model to predict the following moves and get a full principal variation!
+This is very similar to the way language models work. The advantage is that you can ask the model to predict the following moves and get a full principal variation !
 
 However, with this approach it's very difficult for the model to know the position of the pieces: it has to follow every piece from the beginning of the game (e.g. after `... g1f3 ... f3d4` : there is now a knight on `d4`). This leads to a lot of illegal moves when trying to predict the next best move.
 
-Instead of the sequence of moves, I decided to give the (textual) representation of the board (as a fenstring) as a "sentence": this drastically reduces the generation of illegal moves!
+Instead of the sequence of moves, I decided to give the (textual) representation of the board (as a fenstring) as the "sentence": this drastically reduces the generation of illegal moves !
 
 This gave me **v0.1**, based on the [Microsoft Phi 3.5](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) model architecture (decoder-only architecture).
 
 I then realised that given a position, trying to predict the best move to play could be seen as... a translation problem !
 
-I switched to such a specialised model, [Google T5](https://huggingface.co/google-t5/t5-base), which gave me the **v0.2** and a nice improvement in strength !
+I switched to such a specialised model (encoder-decoder architecture), [Google T5](https://huggingface.co/google-t5/t5-base), which gave me the **v0.2** and a nice improvement in strength !
 
 <br/>
 
@@ -84,7 +84,7 @@ For v0.1 and v0.2, the models were trained on the same set of 81M positions:
 
 Source code is provided to:
 
-- train the tokeniser, responsible for converting fenstrings and moves into sequences of "tokens"
+- train the tokenizer, responsible for converting fenstrings and moves into sequences of "tokens"
 - train the language model, responsible for predicting the most likely move for a given fenstring
 
 <br/>
