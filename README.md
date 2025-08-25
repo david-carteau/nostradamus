@@ -110,7 +110,7 @@ For v0.1 and v0.2, you'll need:
 
 For v0.3:
 
-- training has been also successfully performed on an **Apple Silicon CPU** (Mac mini M4 Pro 10/16, 24 GB RAM)
+- training has been also successfully performed on an **Apple Silicon CPU** (Mac mini M4 Pro 12/16, 24 GB RAM)
 - you can provide several PGN files (which will be automatically combined) in the `./preparation/pgn` folder
 
 <br/>
