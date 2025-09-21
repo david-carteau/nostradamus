@@ -33,6 +33,7 @@ SOFTWARE.
 ##############################################################################
 
 import os
+import sys
 import chess
 import torch
 import train
@@ -109,16 +110,23 @@ class Engine():
 ##############################################################################
 
 def get_last_model_path():
+    # if pyinstaller is used, base_path = sys._MEIPASS
+    if hasattr(sys, '_MEIPASS'):
+        base_path = sys._MEIPASS
+    else:
+        base_path = '.'
+    #end if
+    
     models = []
     
-    for entry in os.scandir("./models"):
+    for entry in os.scandir(f'{base_path}/models'):
         if entry.is_file() and entry.name.startswith("epoch-") and entry.name.endswith(".pt"):
             models.append(entry.name)
         #end if
     #end for
     
     last_model = sorted(models)[-1]
-    last_model_path = f'./models/{last_model}'
+    last_model_path = f'{base_path}/models/{last_model}'
     
     return last_model_path
 #end def

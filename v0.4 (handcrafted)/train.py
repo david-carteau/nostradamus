@@ -319,7 +319,7 @@ class MultiHeadAttention(torch.nn.Module):
         q, k, v = self.attn(x).split(C, dim=2)
         
         # head size
-        H = k.size(-1)
+        H = C // self.n_heads
         
         k = k.view(B, T, self.n_heads, C // self.n_heads).transpose(1, 2) # (B, n_heads, T, H)
         q = q.view(B, T, self.n_heads, C // self.n_heads).transpose(1, 2) # (B, n_heads, T, H)
